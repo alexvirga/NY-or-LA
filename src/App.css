@@ -28,18 +28,12 @@
   color: #61dafb;
 }
 
-
-
-
 .response-left {
   border-right: 1px solid;
-
 }
 
 .response-right {
   border-left: 1px solid;
-
-
 }
 
 .response {
@@ -49,16 +43,56 @@
   align-items: center;
   display: inline-block;
   justify-content: center;
-  border-color: white
+  border-color: white;
 }
 
-.response:hover{
+.response:hover {
   background-color: yellow;
 }
-.response-container {
 
+.progress {
+  margin-top: 20px;
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+
+
+.progress-step {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px
+}
+
+
+.dot-active{
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+  display: inline-block;
+}
+
+.dot-complete{ 
+  background-color: rgba(0, 0, 0, 0.235);
+ 
+ 
+  display: inline-block;
+}
+
+.dot-incomplete{ 
+  background-color: rgb(0, 0, 0);
+  display: inline-block;
+ 
 
 }
+
+
+
+
+
 
 @keyframes App-logo-spin {
   from {
