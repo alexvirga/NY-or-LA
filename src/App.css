@@ -28,6 +28,38 @@
   color: #61dafb;
 }
 
+
+
+
+.response-left {
+  border-right: 1px solid;
+
+}
+
+.response-right {
+  border-left: 1px solid;
+
+
+}
+
+.response {
+  width: 49%;
+  text-align: center;
+  background-color: #f4f4f4;
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+  border-color: white
+}
+
+.response:hover{
+  background-color: yellow;
+}
+.response-container {
+
+
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
