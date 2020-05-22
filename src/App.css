@@ -30,7 +30,7 @@
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #fefaec;
-  margin: 0 0.3em 0.3em 0;
+  margin: 40px;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
@@ -55,13 +55,18 @@
   width: 100vw;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  top: 13%;
+  bottom: 13%
 }
 
 .slide {
   display: inline-block;
+  flex-direction: column;
+  align-items: center;
   animation: slide 0.6s;
   margin: 20px;
-  overflow: hidden;
+  
 }
 
 .quiz-landing {
@@ -69,10 +74,38 @@
   display: inline-block;
   color: #fefaec;
   width: 100vw;
+  position: absolute;
+  top: 15%;
+    left: 0%;
 }
 
 /*---------- Responses ----------*/
+.response-container {
+  height: 250px;
+  width: 60%;
+  max-width: 680px;
+  min-width: 200px;
+  display: inline-flex;
+  margin: 20px
+}
 
+.response {
+  width: 49%;
+  text-align: center;
+  background-color: #625772;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  border-color: white;
+  height: 100%;
+  color: #fefaec;
+  padding: 0px 10px 0px 10px;
+  
+}
+
+.response:hover {
+  background-color: #ab9cc2bb;
+}
 .response-left {
   border-right: 1px solid;
   border-radius: 10px 0px 0px 10px;
@@ -88,7 +121,7 @@
   width: 100%;
   max-width: 850px;
   font-size: 1.4em;
-
+  margin-bottom: 30px;
   display: inline-flex;
   justify-content: center;
 }
@@ -97,38 +130,18 @@
 /*---------- Quiz Results ----------*/
 .result-text {
   color: #fefaec;
-  width: 100%;
-  max-width: 850px;
+
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  right: 0%;
   font-size: 1.4em;
-
-  display: inline-flex;
   justify-content: center;
+  margin: 20px;
+  overflow: wrap;
 }
 
-.response-container {
-  height: 250px;
-  width: 60%;
-  max-width: 680px;
-  min-width: 200px;
-  display: inline-flex;
-}
 
-.response {
-  width: 49%;
-  text-align: center;
-  background-color: #625772;
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  border-color: white;
-  height: 100%;
-  color: #fefaec;
-  padding: 0px 10px 0px 10px;
-}
-
-.response:hover {
-  background-color: #ab9cc2bb;
-}
 
 
 /*---------- Progress ----------*/
@@ -178,6 +191,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  margin-top: 20px;
 }
 
 
@@ -189,13 +203,24 @@
   }
   .quiz-container {
     overflow: hidden;
+  
+   
   }
   .start-button {
     display: block;
-    margin: 0.4em auto;
+    margin: 40px auto;
     width: 60%;
     max-width: 300px;
     height: 60px;
+  
+   
+  
+  }
+  .quiz-landing {
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    left: 0%
   }
 }
 

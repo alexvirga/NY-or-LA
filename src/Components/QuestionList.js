@@ -11,8 +11,8 @@ const questionList = [
       question: "What caused the root of all of the chaos?",
       points: 1,
       answers: [
-        { answer: "An earthquake", city: "LA" },
         { answer: "World War 3", city: "NY" },
+        { answer: "An earthquake", city: "LA" },
       ],
     },
     {
@@ -27,8 +27,8 @@ const questionList = [
       question: "Where was an island converted into a prison?",
       points: 1,
       answers: [
-        { answer: "LA", city: "LA" },
         { answer: "Manhattan", city: "NY" },
+        { answer: "LA", city: "LA" },
       ],
     },
     {

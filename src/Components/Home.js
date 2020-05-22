@@ -44,7 +44,7 @@ class Home extends Component {
           )
         ) : (
           <div className="quiz-landing">
-            <h1> Did You Escape From NY or LA </h1>
+            <h1 style={{margin: "20px"}}> Did You Escape From NY or LA </h1>
             <button
               className={"start-button"}
               onClick={() => this.setState({ started: true })}
