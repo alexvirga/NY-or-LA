@@ -10,8 +10,8 @@ class Question extends Component {
 
   render() {
     return (
-      <div>
-        <h1> {this.props.currentQuestion.question} </h1>
+      <div className="slide" >
+        <h1 className="question-title"> {this.props.currentQuestion.question} </h1>
         <div className={"response-container"}>
             <div className={"response response-left"} onClick={() => this.props.handleAnswer(this.props.currentQuestion.answers[0].city) }>
             {this.props.currentQuestion.answers[0].answer}

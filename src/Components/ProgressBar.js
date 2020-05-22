@@ -1,25 +1,28 @@
 import React, { Component } from "react";
 
 class ProgressBar extends Component {
-  renderDots = () => {
-    console.log(this.props.questionCount);
-    const dotArr = []
-    for (let i = 1; i < this.props.questionCount; i++){
-        console.log(this.props.currentQuestion)
-        if (this.props.currentQuestion >= i ){
-            dotArr.push(<div id={`step${i}`} className="progress-step dot-incomplete" />)
-            
-        } else  dotArr.push(<div id={`step${i}`} className="progress-step dot-complete" />)
 
+  renderDots = () => {
+    const dotArr = [];
+    for (let i = 0; i < this.props.questionCount - 1; i++) {
+      if (this.props.currentQuestion >= i) {
+        dotArr.push(
+          <div id={`step${i}`} className="progress-step dot-incomplete" />
+        );
+      } else
+        dotArr.push(
+          <div id={`step${i}`} className="progress-step dot-complete" />
+        );
     }
-    return dotArr
+    return dotArr;
   };
+
 
   render() {
 
-    return <div className="progress">
-        {this.renderDots()}
-    </div>;
+    return (
+    <div className="progress">{this.renderDots()}</div>
+    )
   }
 }
 

@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import Question from "./Question";
 import QuestionList from "./QuestionList";
 import ProgressBar from "./ProgressBar"
+import QuizResults from "./QuizResults"
 
 class Home extends Component {
   state = {
     started: false,
-    currentQuestion: 1,
+    currentQuestion: 0,
     score: {
       NY: 0,
       LA: 0,
@@ -19,19 +20,18 @@ class Home extends Component {
       ...this.state.score,
       city: this.state.score[city]++,
     });
-    console.log(this.state.score);
+
   };
 
   render() {
     return (
       <div>
-        <h1> Home</h1>
         {this.state.started ? (
           this.state.currentQuestion < QuestionList.length ? (
 
-              <div>
-            <p> {this.state.currentQuestion}</p>
+              <div className="quiz-container">
             <Question
+             key ={this.state.currentQuestion}
               handleAnswer={this.handleAnswer}
               currentQuestion={QuestionList[this.state.currentQuestion]}
               />
@@ -39,9 +39,9 @@ class Home extends Component {
             </div>
             
           ) : 
-            <h1> finished</h1>
+          <QuizResults finalScore={this.state.score} />
         ) : (
-          <div>
+          <div className="quiz-landing">
             <h1> Did You Escape From NY or LA </h1>
             <button onClick={() => this.setState({ started: true })}>
               Start Quiz
