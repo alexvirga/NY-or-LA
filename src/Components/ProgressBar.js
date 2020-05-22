@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class ProgressBar extends Component {
-
   renderDots = () => {
     const dotArr = [];
     for (let i = 0; i < this.props.questionCount - 1; i++) {
@@ -17,12 +16,8 @@ class ProgressBar extends Component {
     return dotArr;
   };
 
-
   render() {
-
-    return (
-    <div className="progress">{this.renderDots()}</div>
-    )
+    return <div className="progress">{this.renderDots()}</div>;
   }
 }
 

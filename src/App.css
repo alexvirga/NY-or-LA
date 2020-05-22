@@ -20,10 +20,34 @@
   color: white;
 }
 
-
 .App-link {
   color: #61dafb;
 }
+
+/*---------- Button ----------*/
+
+.start-button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #fefaec;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #fefaec;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: #625772;
+}
+
+.start-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*---------- Quiz Containers ----------*/
 
 .quiz-container {
   background-color: #625772;
@@ -33,20 +57,30 @@
   align-items: center;
 }
 
+.slide {
+  display: inline-block;
+  animation: slide 0.6s;
+  margin: 20px;
+  overflow: hidden;
+}
+
 .quiz-landing {
   background-color: #625772;
   display: inline-block;
   color: #fefaec;
-
   width: 100vw;
 }
 
+/*---------- Responses ----------*/
+
 .response-left {
   border-right: 1px solid;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .response-right {
   border-left: 1px solid;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .question-title {
@@ -59,6 +93,8 @@
   justify-content: center;
 }
 
+
+/*---------- Quiz Results ----------*/
 .result-text {
   color: #fefaec;
   width: 100%;
@@ -93,6 +129,9 @@
 .response:hover {
   background-color: #ab9cc2bb;
 }
+
+
+/*---------- Progress ----------*/
 
 .progress {
   margin-top: 20px;
@@ -130,6 +169,18 @@
   display: inline-block;
 }
 
+
+
+ /*---------- Footer ----------*/
+.footer {
+  color: #fefaec79;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
 @media only screen and (max-width: 768px) {
   .response-container {
     height: 250px;
@@ -139,18 +190,20 @@
   .quiz-container {
     overflow: hidden;
   }
+  .start-button {
+    display: block;
+    margin: 0.4em auto;
+    width: 60%;
+    max-width: 300px;
+    height: 60px;
+  }
 }
 
-.slide {
-  display: inline-block;
-  animation: slide 0.7s;
-  margin: 20px;
-  overflow: hidden;
-}
+
 
 @keyframes slide {
   0% {
-    transform: translate3d(100%, 0px, 0px);
+    transform: translate3d(70%, 0px, 0px);
     visibility: hidden;
   }
   100% {
